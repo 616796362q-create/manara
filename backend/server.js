@@ -118,6 +118,11 @@ app.get('/', (req, res) => {
   res.send('🏢 Manara Plaza API is Running...');
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server started on port ${PORT}`);
-});
+// Local server listening (Optional for serverless, but kept for local development)
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`🚀 Manara Plaza Server Running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
