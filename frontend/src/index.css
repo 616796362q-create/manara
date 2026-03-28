@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-manara-dark: #1a2421;
+  --color-manara-gold: #b8860b;
+  --color-manara-gold-light: #d4a017;
+}
+
+:root {
+  --manara-dark: #1a2421;
+  --manara-gold: #b8860b;
+  --manara-gold-light: #d4a017;
+}
+
+body {
+  background-color: #f8fafc;
+  color: var(--manara-dark);
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.bg-manara-gradient {
+  background: linear-gradient(135deg, var(--manara-dark) 0%, #2c3e3a 100%);
+}
+
+.text-manara-gold {
+  color: var(--manara-gold);
+}
+
+.border-manara-gold {
+  border-color: var(--manara-gold);
+}
+
+.btn-premium {
+  @apply px-6 py-3 font-semibold transition-all duration-300 rounded-full flex items-center justify-center gap-2;
+  background: var(--manara-gold);
+  color: white;
+}
+
+.btn-premium:hover {
+  background: var(--manara-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+}
+
+.card-premium {
+  @apply bg-white rounded-2xl overflow-hidden shadow-sm transition-all duration-500;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-premium:hover {
+  @apply shadow-2xl;
+  transform: translateY(-5px);
+}
+
+.glass-morphism {
+  background: rgba(26, 36, 33, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--manara-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--manara-gold-light);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}
