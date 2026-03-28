@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { User, Users, Star, Wifi, Coffee, Shield, MessageCircle, Globe, Loader2 } from 'lucide-react';
 import Hero from '../components/Hero';
 import BookingModal from '../components/BookingModal';
+import API_URL from '../config';
 
 const categories = ['All', 'Single', 'Double'];
 
@@ -15,7 +16,8 @@ const HotelPage = () => {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const res = await fetch('http://localhost:5001/api/rooms');
+        const res = await fetch(`${API_URL}/rooms`);
+
         const data = await res.json();
         
         // Filter only Hotel rooms and map fields to match UI expectations

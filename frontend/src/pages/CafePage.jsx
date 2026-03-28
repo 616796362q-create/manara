@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, ShoppingCart, Coffee, Flame, Snowflake, Cake, Loader2 } from 'lucide-react';
 import Hero from '../components/Hero';
+import API_URL from '../config';
 
 const categories = [
   { name: 'All', icon: Coffee },
@@ -19,7 +20,8 @@ const CafePage = ({ addToCart }) => {
   useEffect(() => {
     const fetchCafe = async () => {
       try {
-        const res = await fetch('http://localhost:5001/api/menu');
+        const res = await fetch(`${API_URL}/menu`);
+
         const data = await res.json();
         
         const cafeMenu = data

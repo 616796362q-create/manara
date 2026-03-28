@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Users, MessageCircle, Globe, Landmark, Loader2 } from 'lucide-react';
 import Hero from '../components/Hero';
 import HallBookingModal from '../components/HallBookingModal';
+import API_URL from '../config';
 
 const typeIcons = {
   'Royal Grand Ballroom': '💍',
@@ -18,7 +19,8 @@ const HallsPage = () => {
   useEffect(() => {
     const fetchHalls = async () => {
       try {
-        const res = await fetch('http://localhost:5001/api/rooms');
+        const res = await fetch(`${API_URL}/rooms`);
+
         const data = await res.json();
         const hallList = data
           .filter(r => r.type === 'Hall')

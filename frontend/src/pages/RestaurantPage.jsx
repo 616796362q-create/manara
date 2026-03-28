@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, ShoppingCart, Star, Clock, Flame, Loader2 } from 'lucide-react';
 import Hero from '../components/Hero';
+import API_URL from '../config';
 
 const categories = ['All', 'Appetizer', 'Main Course', 'Dessert'];
+
 
 const badgeColors = {
   "Chef's Pick": 'bg-manara-gold text-manara-dark',
@@ -21,7 +23,8 @@ const RestaurantPage = ({ addToCart }) => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const res = await fetch('http://localhost:5001/api/menu');
+        const res = await fetch(`${API_URL}/menu`);
+
         const data = await res.json();
         
         // Filter and Map

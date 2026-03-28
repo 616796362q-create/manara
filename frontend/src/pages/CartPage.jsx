@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, ShoppingCart, Plus, Minus, Trash2, Phone, Globe, User, Check, Loader2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import API_URL from '../config';
 
 const CartPage = ({ cart, updateQty, removeItem, clearCart }) => {
   const [mode, setMode] = useState(null); // 'online'
