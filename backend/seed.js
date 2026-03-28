@@ -37,7 +37,7 @@ const seedData = async () => {
 
     // --- Rooms ---
     const rooms = [
-      { name: 'Single Premium Room', type: 'Hotel', roomType: 'Single', price: 150, description: 'Comfortable single room with all modern amenities.', imageUrl: 'https://images.unsplash.com/photo-1595085611766-638aa1794b7c?auto=format&fit=crop&q=80&w=1000' },
+      { name: 'Single Premium Room', type: 'Hotel', roomType: 'Single', price: 150, description: 'Comfortable single room with all modern amenities.', imageUrl: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=1000' },
       { name: 'Double Deluxe Room', type: 'Hotel', roomType: 'Double', price: 300, description: 'Spacious double room with premium beds and views.', imageUrl: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1000' },
       { name: 'Diamond Grand Ballroom', type: 'Hall', price: 5000, description: 'The most prestigious venue for large events and galas.', imageUrl: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1000' },
       { name: 'Royal Manara Wedding Hall', type: 'Hall', price: 6500, description: 'The grandest hall in the city, perfectly designed for luxury weddings and royal galas.', imageUrl: 'https://images.unsplash.com/photo-1541280910158-c4e14f9c94a3?auto=format&fit=crop&q=80&w=1000' },
