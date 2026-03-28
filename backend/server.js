@@ -16,7 +16,7 @@ mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .then(() => console.log('✅ MongoDB Connected'))
+  .then(() => console.log('✅ Manara Plaza Connected to MongoDB'))
   .catch(err => console.error('❌ Connection Error:', err));
 
 // Schemas

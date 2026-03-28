@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-const mongoURI = 'mongodb://localhost:27017/manara_plaza';
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/manara_plaza';
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('✅ Connected to MongoDB for Seeding'))
   .catch(err => console.error('❌ Connection Error:', err));
+
 
 // Schemas
 const roomSchema = new mongoose.Schema({
